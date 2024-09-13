@@ -27,7 +27,17 @@
                 CallButton.Text = "Call";
             }
         }
-
+        async void OnCall(object sender, System.EventArgs e)
+        {
+            if (await this.DisplayAlert(
+                "Dial a Number",
+                "Would you like to call " + translatedNumber + "?",
+                "Yes",
+                "No"))
+            {
+                // TODO: dial the phone
+            }
+        }
 
 
     }
